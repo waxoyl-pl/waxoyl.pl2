@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waxoyl Polska — Swiss Technology · Professional Car Care</title>
+<meta name="description" content="Waxoyl Polska — profesjonalna ochrona samochodów, antykorozja i car care.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --red:#e30613;
+  --red2:#ff1724;
+  --black:#050505;
+  --black2:#090909;
+  --panel:#0d0d0d;
+  --panel2:#111;
+  --line:rgba(255,255,255,.10);
+  --line2:rgba(255,255,255,.06);
+  --white:#f7f7f5;
+  --soft:#c4c4c0;
+  --muted:#777;
+  --max:1380px;
+  --display:'Barlow Condensed',Arial,sans-serif;
+  --body:'Inter',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--black);color:var(--white);
+  font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.container{width:min(var(--max),100%);margin:auto;padding:0 48px}
+
+/* HEADER */
+header{
+  height:82px;position:sticky;top:0;z-index:1000;
+  display:flex;align-items:center;padding:0 42px;
+  background:rgba(4,4,4,.88);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(20px);
+}
+.brand{
+  display:flex;align-items:center;
+  width:155px;flex:0 0 155px;
+}
+.logo{
+  width:118px;height:58px;object-fit:contain;display:block;
+}
+nav{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:27px;
+}
+nav a{
+  position:relative;padding:31px 0 29px;
+  color:#aaa;font-size:9px;font-weight:800;
+  letter-spacing:1px;text-transform:uppercase;
+  transition:.25s;white-space:nowrap;
+}
+nav a:after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;
+  background:var(--red);transition:.3s;
+}
+nav a:hover,nav a.active{color:#fff}
+nav a:hover:after,nav a.active:after{right:0}
+nav a:first-child{
+  color:var(--red);font-size:16px;width:18px;text-align:center;
+}
+nav a:first-child:after{display:none}
+.header-actions{
+  width:205px;flex:0 0 205px;
+  display:flex;align-items:center;justify-content:flex-end;gap:13px;
+}
+.header-phone{
+  color:#777;font-size:8px;font-weight:700;letter-spacing:.5px;
+  white-space:nowrap;transition:.25s;
+}
+.header-phone:hover{color:#fff}
+.header-point{
+  height:36px;padding:0 13px;
+  display:flex;align-items:center;gap:9px;
+  border:1px solid rgba(227,6,19,.7);
+  color:#eee;font-size:8px;font-weight:800;letter-spacing:.8px;
+  white-space:nowrap;transition:.25s;
+}
+.header-point b{color:var(--red);font-size:13px;font-weight:400}
+.header-point:hover{
+  background:var(--red);border-color:var(--red);color:#fff;
+}
+.header-point:hover b{color:#fff}
+.menu{
+  display:none;margin-left:auto;width:42px;height:42px;
+  background:none;border:1px solid #333;color:#fff;
+}
+
+/* HERO */
+.hero{
+  min-height:760px;position:relative;overflow:hidden;
+  display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 74% 48%,rgba(227,6,19,.15),transparent 25%),
+    linear-gradient(105deg,#030303 0%,#070707 48%,#101010 100%);
+}
+.hero:before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.58) 46%,rgba(0,0,0,.15) 100%);
+  z-index:1;
+}
+.hero-photo{
+  position:absolute;right:0;top:0;width:68%;height:100%;opacity:.72;
+  background:
+    linear-gradient(90deg,#050505 0%,rgba(5,5,5,.35) 42%,rgba(5,5,5,.05) 100%),
+    url("hero-bg.png") center center / cover no-repeat;
+}
+.hero-photo:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 42%,rgba(0,0,0,.08));
+}
+.hero-content{position:relative;z-index:3;max-width:760px;padding:145px 0 130px}
+.eyebrow{
+  display:flex;align-items:center;gap:12px;color:var(--red);
+  font-size:10px;font-weight:800;letter-spacing:2.5px;line-height:1;
+  text-transform:uppercase;
+}
+.eyebrow:before{
+  content:"";width:34px;height:1px;flex:0 0 34px;background:var(--red);
+}
+.eyebrow:after{
+  content:"";width:4px;height:4px;flex:0 0 4px;border-radius:50%;
+  background:var(--red);opacity:.7;
+}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase}
+h1{
+  margin:18px 0 25px;
+  font-size:clamp(62px,7.4vw,104px);line-height:.86;
+  letter-spacing:-2.8px;font-weight:800;
+}
+h1 span{color:var(--red)}
+.lead{max-width:650px;color:#a9a9a6;font-size:14px;line-height:1.8}
+.actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:48px;
+  padding:0 24px;border:1px solid rgba(255,255,255,.34);
+  font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  transition:.3s;
+}
+.btn:hover{background:#fff;border-color:#fff;color:#090909;transform:translateY(-2px)}
+.btn.red{background:var(--red);border-color:var(--red)}
+.btn.red:hover{background:var(--red2);border-color:var(--red2);color:#fff}
+.hero-meta{
+  display:flex;gap:28px;margin-top:52px;padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#666;font-size:9px;letter-spacing:1px;font-weight:700;
+}
+.hero-meta b{color:#eee;margin-right:5px}
+
+/* LUXURY TICKER */
+.brand-statement{
+  overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:#080808;white-space:nowrap;
+}
+.brand-track{
+  display:inline-flex;align-items:center;gap:32px;min-width:max-content;
+  padding:15px 0;animation:marquee 28s linear infinite;
+}
+.brand-track span{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:2px;color:#555}
+.brand-track span.red{color:var(--red)}
+.brand-track i{width:3px;height:3px;border-radius:50%;background:var(--red);display:inline-block}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* APPLICATION AREAS — INSPIRED BY OFFICIAL WAXOYL STRUCTURE */
+.application-areas{
+  padding:42px 0 0;
+  background:#070707;
+  border-bottom:1px solid var(--line);
+}
+.application-head{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:25px;padding-bottom:23px;
+}
+.application-note{
+  color:#444;font-size:8px;font-weight:800;letter-spacing:1.7px;
+}
+.application-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+}
+.application-card{
+  position:relative;min-height:235px;padding:27px 25px 25px;
+  border-right:1px solid var(--line);overflow:hidden;
+  background:linear-gradient(145deg,#0c0c0c,#070707);
+  transition:background .35s,transform .35s;
+}
+.application-card:last-child{border-right:0}
+.application-card:before{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--red);transition:width .4s ease;
+}
+.application-card:hover{background:#101010;transform:translateY(-3px)}
+.application-card:hover:before{width:100%}
+.application-card .area-number{margin-bottom:47px}
+.application-card h3{
+  max-width:230px;font-size:20px;line-height:1.02;
+  margin:0 0 11px;letter-spacing:.2px;
+}
+.application-card p{
+  max-width:265px;color:#6f6f6b;font-size:10px;line-height:1.7;margin:0;
+}
+.application-card>span{
+  position:absolute;right:20px;bottom:19px;color:#333;
+  font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:1px;
+}
+
+/* AREAS */
+.areas{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.area{
+  position:relative;padding:35px 34px 38px;min-height:205px;
+  border-right:1px solid var(--line);overflow:hidden;
+  background:linear-gradient(145deg,#0d0d0d,#080808);
+  transition:.35s;
+}
+.area:last-child{border:0}
+.area:before{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--red);transition:.4s;
+}
+.area:hover{background:#111}
+.area:hover:before{width:100%}
+.area-number{
+  color:#555;font-family:var(--display);font-size:12px;font-weight:700;
+  letter-spacing:2px;margin-bottom:38px;
+}
+.area-number:before{content:"WAXOYL / ";color:var(--red)}
+.area h3{font-size:22px;line-height:1;margin:0 0 12px;letter-spacing:.2px}
+.area p{max-width:330px;color:#777;font-size:11px;line-height:1.65;margin:0}
+
+/* SECTIONS */
+.section{padding:110px 0}
+.section.dark{background:#080808}
+.section-heading{max-width:830px;margin-bottom:48px}
+.section-heading h2{
+  margin:12px 0 18px;font-size:clamp(50px,5.8vw,78px);
+  line-height:.87;letter-spacing:-1.7px;font-weight:700;
+}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+
+/* ABOUT */
+.about-copy p{max-width:620px;color:#aaa;font-size:14px;line-height:1.85}
+.about-facts{
+  margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.fact{padding:25px 18px 25px 0;border-right:1px solid var(--line)}
+.fact:last-child{border:0;padding-left:18px}
+.fact b{font-family:var(--display);font-size:48px;font-weight:600;letter-spacing:-1px}
+.fact span{display:block;color:#686865;font-size:8px;font-weight:800;letter-spacing:1px;margin-top:3px}
+.logo-box{
+  min-height:450px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);position:relative;overflow:hidden;
+  background:radial-gradient(circle,rgba(227,6,19,.12),transparent 38%),#080808;
+}
+.logo-box:before,.logo-box:after{
+  content:"";position:absolute;border:1px solid rgba(255,255,255,.06);border-radius:50%;
+}
+.logo-box:before{width:390px;height:390px}
+.logo-box:after{width:300px;height:300px}
+.logo-box img{position:relative;z-index:2;width:235px;height:235px;object-fit:contain;filter:drop-shadow(0 25px 45px #000)}
+
+/* PRODUCTS */
+.product-intro{display:flex;justify-content:space-between;align-items:end;gap:35px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+.product{
+  position:relative;min-height:390px;padding:24px;
+  background:linear-gradient(155deg,#121212,#0a0a0a);
+  border:1px solid var(--line);text-align:center;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;transition:.35s;
+}
+.product:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--red),transparent);
+  opacity:0;transition:.35s;
+}
+.product:hover{border-color:rgba(255,255,255,.24);transform:translateY(-5px)}
+.product:hover:before{opacity:1}
+.product-image{width:100%;height:245px;object-fit:contain;margin-bottom:15px}
+.placeholder{
+  width:62px;height:165px;margin:0 auto 65px;border-radius:6px 6px 10px 10px;
+  background:linear-gradient(90deg,#080808,#4a4a4a,#080808);
+  box-shadow:0 30px 55px rgba(227,6,19,.16);
+}
+.product strong{font-family:var(--display);font-size:21px;letter-spacing:.5px}
+.product small{color:#70706d;font-size:10px;line-height:1.55;margin-top:7px}
+.product{text-decoration:none;color:inherit}
+
+/* 100 PLUS */
+.plus{background:linear-gradient(100deg,#080808,#0a0a0a)}
+.plus-image{
+  min-height:500px;border:1px solid var(--line);display:flex;align-items:center;
+  justify-content:center;overflow:hidden;position:relative;
+  background:radial-gradient(circle,rgba(227,6,19,.16),transparent 42%),#070707;
+}
+.plus-image:before{
+  content:"100";position:absolute;left:-25px;bottom:-75px;
+  font-family:var(--display);font-size:230px;line-height:1;font-weight:800;
+  color:rgba(255,255,255,.025);
+}
+.plus-image img{position:relative;z-index:2;width:90%;max-height:440px;object-fit:contain}
+.plus-content h2{
+  font-size:clamp(60px,6vw,88px);line-height:.8;letter-spacing:-2px;margin:14px 0 24px;
+}
+.plus-list{margin-top:32px;border-top:1px solid var(--line)}
+.plus-list div{
+  padding:15px 0;border-bottom:1px solid var(--line);
+  color:#999;font-size:11px;
+}
+.plus-list b{color:var(--red);font-family:var(--display);font-size:16px;margin-right:10px}
+
+/* PARTNER */
+.partner{
+  position:relative;overflow:hidden;border:1px solid var(--line);padding:68px;
+  background:
+    radial-gradient(circle at 90% 50%,rgba(227,6,19,.12),transparent 32%),
+    linear-gradient(110deg,#121212,#080808);
+}
+.partner:after{
+  content:"WAXOYL";position:absolute;right:-25px;bottom:-60px;
+  font-family:var(--display);font-size:190px;font-weight:800;
+  color:rgba(255,255,255,.025);line-height:1;
+}
+.partner>*{position:relative;z-index:2}
+.partner h2{max-width:800px;font-size:clamp(50px,5.5vw,76px);line-height:.86;letter-spacing:-1.5px;margin:12px 0 20px}
+
+/* CONTACT */
+.contact-meta{
+  padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  color:#999;font-size:12px;line-height:2;
+}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:55px 0 20px;background:#040404}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:45px}
+.footer-logo{width:105px;height:74px;object-fit:contain}
+footer h4{font-size:9px;letter-spacing:1.7px;margin:0 0 16px;color:#ddd}
+footer p{color:#666;font-size:10px;line-height:1.9}
+.copy{
+  border-top:1px solid #1c1c1c;margin-top:38px;padding-top:15px;
+  display:flex;justify-content:space-between;color:#444;font-size:8px;letter-spacing:.5px
+}
+
+/* ANIMATION */
+@keyframes heroIn{
+  from{opacity:0;transform:translateY(35px)}
+  to{opacity:1;transform:none}
+}
+.hero-content .eyebrow{animation:heroIn .8s ease both}
+.hero-content h1{animation:heroIn 1s .08s cubic-bezier(.2,.7,.2,1) both}
+.hero-content .lead{animation:heroIn 1s .18s ease both}
+.hero-content .actions{animation:heroIn 1s .28s ease both}
+.hero-meta{animation:heroIn 1s .38s ease both}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .container{padding:0 30px}
+  header{padding:0 28px}
+  .brand{width:125px;flex-basis:125px}
+  .logo{width:105px}
+  nav{gap:17px}
+  nav a{font-size:8px}
+  .header-actions{width:180px;flex-basis:180px}
+  .header-phone{display:none}
+  .header-point{padding:0 11px;font-size:7px}
+  .products{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:700px){
+  html{scroll-padding-top:74px}
+  body{overflow-x:hidden}
+
+  .container{
+    width:100%;
+    padding:0 18px;
+  }
+
+  /* HEADER */
+  header{
+    height:74px;
+    padding:0 17px;
+  }
+  .brand{width:auto;flex:0 0 auto}
+  .logo{width:78px;height:58px}
+  .header-actions{display:none}
+  .menu{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0;
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:2px;
+  }
+  .menu:before{
+    content:"";
+    width:18px;
+    height:12px;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+    position:relative;
+  }
+  .menu:after{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:1px;
+    background:#fff;
+  }
+  nav{
+    display:none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:74px;
+    padding:5px 20px 12px;
+    background:rgba(5,5,5,.98);
+    border-bottom:1px solid #222;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    box-shadow:0 18px 35px rgba(0,0,0,.45);
+  }
+  nav.open{display:flex}
+  nav a{
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.07);
+    font-size:10px;
+    letter-spacing:1.2px;
+  }
+  nav a:last-child{border-bottom:0}
+  nav a:first-child{
+    font-size:17px;
+    padding-top:13px;
+  }
+  nav a:after{display:none}
+
+  /* HERO */
+  .hero{
+    min-height:calc(100svh - 74px);
+    min-height:650px;
+    align-items:flex-end;
+  }
+  .hero:before{
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.40) 0%,rgba(0,0,0,.50) 36%,rgba(0,0,0,.94) 88%),
+      linear-gradient(90deg,rgba(0,0,0,.65),transparent);
+  }
+  .hero-photo{
+    width:100%;
+    height:76%;
+    top:0;
+    opacity:.52;
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.05) 25%,rgba(5,5,5,.82) 100%),
+      url("hero-bg.png") center center / cover no-repeat;
+  }
+  .hero-photo:after{
+    background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.35) 65%,rgba(0,0,0,.65) 100%);
+  }
+  .hero-content{
+    width:100%;
+    max-width:none;
+    padding:85px 0 45px;
+  }
+  .eyebrow{
+    gap:9px;
+    font-size:8px;
+    letter-spacing:1.8px;
+  }
+  .eyebrow:before{width:22px;flex-basis:22px}
+  .eyebrow:after{width:3px;height:3px;flex-basis:3px}
+  h1{
+    margin:15px 0 18px;
+    font-size:clamp(48px,14.5vw,70px);
+    line-height:.86;
+    letter-spacing:-1.8px;
+  }
+  .lead{
+    font-size:12px;
+    line-height:1.7;
+  }
+  .hero-content .lead{
+    max-width:430px;
+  }
+  .actions{
+    margin-top:24px;
+    gap:9px;
+  }
+  .btn{
+    min-height:45px;
+    padding:0 17px;
+    font-size:8px;
+    letter-spacing:.8px;
+  }
+  .hero-content .actions .btn{
+    flex:1 1 auto;
+  }
+  .hero-meta{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    margin-top:30px;
+    padding-top:15px;
+  }
+  .hero-meta span{
+    font-size:7px;
+    line-height:1.4;
+    padding-right:8px;
+  }
+  .hero-meta span:not(:last-child){
+    border-right:1px solid rgba(255,255,255,.10);
+    margin-right:8px;
+  }
+  .hero-meta b{
+    display:block;
+    font-family:var(--display);
+    font-size:19px;
+    margin:0 0 2px;
+  }
+
+  /* TICKER */
+  .brand-track{
+    gap:23px;
+    padding:13px 0;
+    animation-duration:22s;
+  }
+  .brand-track span{
+    font-size:10px;
+    letter-spacing:1.5px;
+  }
+
+  /* APPLICATION AREAS */
+  .application-areas{padding:29px 0 0}
+  .application-head{display:block;padding-bottom:17px}
+  .application-note{margin-top:10px;font-size:7px}
+  .application-grid{grid-template-columns:1fr 1fr}
+  .application-card{min-height:235px;padding:22px 17px 22px}
+  .application-card:nth-child(2){border-right:0}
+  .application-card:nth-child(3),.application-card:nth-child(4){border-top:1px solid var(--line)}
+  .application-card:nth-child(4){border-right:0}
+  .application-card .area-number{margin-bottom:35px;font-size:9px}
+  .application-card h3{font-size:17px;line-height:1.02}
+  .application-card p{font-size:8.5px;line-height:1.55}
+  .application-card>span{right:14px;bottom:14px;font-size:8px}
+
+  /* AREAS */
+  .areas{
+    grid-template-columns:1fr;
+  }
+  .area{
+    min-height:auto;
+    padding:25px 21px 28px;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  .area:last-child{border-bottom:0}
+  .area-number{
+    margin-bottom:22px;
+    font-size:10px;
+  }
+  .area h3{
+    font-size:20px;
+    letter-spacing:.3px;
+  }
+  .area p{
+    max-width:100%;
+    font-size:10px;
+  }
+
+  /* SECTIONS */
+  .section{
+    padding:68px 0;
+  }
+  .section-heading{
+    margin-bottom:31px;
+  }
+  .section-heading h2{
+    font-size:clamp(43px,12.5vw,62px);
+    line-height:.88;
+    letter-spacing:-1px;
+    margin:11px 0 16px;
+  }
+  .split{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  /* ABOUT */
+  .about-copy p{
+    font-size:12px;
+    line-height:1.8;
+  }
+  .about-facts{
+    margin-top:27px;
+    grid-template-columns:repeat(3,1fr);
+  }
+  .fact{
+    padding:17px 9px 17px 0;
+  }
+  .fact:last-child{padding-left:9px}
+  .fact b{
+    font-size:34px;
+  }
+  .fact span{
+    font-size:6.5px;
+    letter-spacing:.7px;
+    line-height:1.3;
+  }
+  .logo-box{
+    min-height:300px;
+  }
+  .logo-box:before{width:260px;height:260px}
+  .logo-box:after{width:205px;height:205px}
+  .logo-box img{
+    width:165px;
+    height:165px;
+  }
+
+  /* PRODUCTS */
+  .product-intro{
+    display:block;
+  }
+  .product-intro .btn{
+    width:100%;
+    margin-top:8px;
+  }
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+    margin-top:28px;
+  }
+  .product{
+    min-height:280px;
+    padding:13px 10px 16px;
+  }
+  .product-image{
+    height:175px;
+    margin-bottom:9px;
+  }
+  .placeholder{
+    width:46px;
+    height:125px;
+    margin-bottom:45px;
+  }
+  .product strong{
+    font-size:17px;
+  }
+  .product small{
+    font-size:8px;
+    line-height:1.45;
+    margin-top:5px;
+  }
+
+  /* 100 PLUS */
+  .plus-image{
+    min-height:320px;
+  }
+  .plus-image:before{
+    font-size:150px;
+    left:-18px;
+    bottom:-42px;
+  }
+  .plus-image img{
+    width:94%;
+    max-height:300px;
+  }
+  .plus-content h2{
+    font-size:68px;
+    letter-spacing:-1.5px;
+  }
+  .plus-list{
+    margin-top:24px;
+  }
+  .plus-list div{
+    padding:12px 0;
+    font-size:10px;
+  }
+  .plus-list b{
+    font-size:14px;
+  }
+
+  /* PARTNER */
+  .partner{
+    padding:38px 22px;
+  }
+  .partner h2{
+    font-size:clamp(43px,12.8vw,61px);
+    line-height:.87;
+  }
+  .partner:after{
+    font-size:120px;
+    right:-16px;
+    bottom:-30px;
+  }
+
+  /* CONTACT */
+  .contact-meta{
+    font-size:11px;
+    line-height:1.9;
+  }
+
+  /* FOOTER */
+  footer{
+    padding:43px 0 17px;
+  }
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:28px 20px;
+  }
+  .footer-grid > div:first-child{
+    grid-column:1 / -1;
+  }
+  .footer-logo{
+    width:95px;
+    height:65px;
+  }
+  footer h4{
+    font-size:8px;
+    letter-spacing:1.3px;
+  }
+  footer p{
+    font-size:9px;
+    line-height:1.8;
+  }
+  .copy{
+    margin-top:28px;
+    padding-top:13px;
+    flex-direction:column;
+    gap:7px;
+    font-size:7px;
+  }
+}
+
+@media(max-width:390px){
+  .container{padding:0 15px}
+  .application-card{min-height:220px;padding:20px 14px}
+  .application-card h3{font-size:15px}
+  .application-card p{font-size:8px}
+
+  header{padding:0 14px}
+  .hero-content{padding-bottom:35px}
+  h1{font-size:49px}
+  .hero-meta span{font-size:6.5px}
+  .hero-meta b{font-size:17px}
+  .product{min-height:265px}
+  .product-image{height:160px}
+  .product strong{font-size:15px}
+  .section{padding:58px 0}
+}
+
+@media(hover:none){
+  .area:hover,
+  .product:hover{
+    transform:none;
+  }
+}
+
+/* REAL PRODUCT IMAGE — 120-4 PLUS */
+.product-image[src="120-4-plus.png"]{
+  width:100%;
+  height:245px;
+  object-fit:contain;
+  padding:8px 34px;
+  filter:drop-shadow(0 22px 28px rgba(0,0,0,.55));
+  transition:transform .45s ease, filter .45s ease;
+}
+.product:hover .product-image[src="120-4-plus.png"]{
+  transform:translateY(-5px) scale(1.025);
+  filter:drop-shadow(0 28px 35px rgba(227,6,19,.14));
+}
+@media(max-width:700px){
+  .product-image[src="120-4-plus.png"]{
+    height:175px;
+    padding:5px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="./">
+    <img class="logo" src="./waxoyl-logo.gif" alt="Waxoyl Professional Car Care" onerror="this.style.display='none';">
+  </a>
+
+  <nav id="nav">
+    <a class="active" href="./">⌂</a>
+    <a href="./#about">O FIRMIE</a>
+    <a href="./products/index.html">PRODUKTY</a>
+    <a href="./#cooperation">WSPÓŁPRACA</a>
+    <a href="./autoryzowane-punkty/index.html">AUTORYZOWANE PUNKTY</a>
+    <a href="./#contact">KONTAKT</a>
+  </nav>
+
+  <div class="header-actions">
+    <a class="header-phone" href="tel:+48585500550">+48 58 550 05 50</a>
+    <a class="header-point" href="./autoryzowane-punkty/index.html">ZNAJDŹ PUNKT <b>↗</b></a>
+  </div>
+
+  <button class="menu" id="menu" aria-label="Menu">☰</button>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-photo"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Professional Car Care · Advanced Technology</div>
+
+      <h1>
+        PROFESJONALNA<br>
+        <span>OCHRONA SAMOCHODU</span>
+      </h1>
+
+      <p class="lead">
+        Szwajcarskie rozwiązania do ochrony samochodu —
+        od zabezpieczenia antykorozyjnego po profesjonalną pielęgnację.
+      </p>
+
+      <div class="actions">
+        <a class="btn red" href="./#corrosion">POZNAJ WAXOYL →</a>
+        <a class="btn" href="./autoryzowane-punkty/index.html">ZNAJDŹ PUNKT →</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>50+</b> LAT DOŚWIADCZENIA</span>
+        <span><b>25+</b> KRAJÓW</span>
+        <span><b>200+</b> PUNKTÓW W POLSCE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brand-statement" aria-label="Waxoyl">
+  <div class="brand-track">
+    <span class="red">WAXOYL</span><i></i>
+    <span>PROFESSIONAL CAR CARE</span><i></i>
+    <span>ADVANCED TECHNOLOGY</span><i></i>
+    <span>PERFEKCJA W OCHRONIE</span><i></i>
+    <span class="red">WAXOYL</span><i></i>
+    <span>PROFESSIONAL CAR CARE</span><i></i>
+    <span>ADVANCED TECHNOLOGY</span><i></i>
+    <span>PERFEKCJA W OCHRONIE</span><i></i>
+  </div>
+</section>
+
+<section id="applications" class="application-areas">
+  <div class="container">
+    <div class="application-head">
+      <div class="eyebrow">Obszary zastosowania</div>
+      <div class="application-note">PROFESSIONAL USE ONLY · WAXOYL</div>
+    </div>
+    <div class="application-grid">
+      <article class="application-card">
+        <div class="area-number">01</div>
+        <h3>CAR CARE</h3>
+        <p>Czyszczenie · Pielęgnacja · Polerowanie · Ochrona powierzchni.</p>
+        <span>01 / 04</span>
+      </article>
+
+      <article class="application-card">
+        <div class="area-number">02</div>
+        <h3>ANTYKOROZJA</h3>
+        <p>Podwozie · Profile zamknięte · Ochrona zewnętrzna.</p>
+        <span>02 / 04</span>
+      </article>
+
+      <article class="application-card">
+        <div class="area-number">03</div>
+        <h3>TRANSPORT I MAGAZYNOWANIE</h3>
+        <p>Ochrona pojazdów, maszyn i elementów podczas transportu oraz przechowywania.</p>
+        <span>03 / 04</span>
+      </article>
+
+      <article class="application-card">
+        <div class="area-number">04</div>
+        <h3>WARSZTAT I BLACHARNIA</h3>
+        <p>Profesjonalna chemia, materiały eksploatacyjne i rozwiązania do aplikacji.</p>
+        <span>04 / 04</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="split">
+
+      <div class="about-copy">
+        <div class="eyebrow">Swiss Technology · Waxoyl</div>
+
+        <div class="section-heading">
+          <h2>TECHNOLOGIA.<br>KTÓREJ UFASZ.</h2>
+        </div>
+
+        <p>
+          Waxoyl koncentruje się na profesjonalnej ochronie pojazdów,
+          łącząc technologię, doświadczenie i rozwiązania przygotowane
+          do pracy przez certyfikowanych specjalistów.
+        </p>
+
+        <div class="about-facts">
+          <div class="fact">
+            <b>50+</b>
+            <span>LAT DOŚWIADCZENIA</span>
+          </div>
+          <div class="fact">
+            <b>25+</b>
+            <span>KRAJÓW</span>
+          </div>
+          <div class="fact">
+            <b>200+</b>
+            <span>PUNKTÓW W POLSCE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo-box">
+        <img src="./waxoyl-logo.gif" alt="Waxoyl">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section dark">
+  <div class="container">
+
+    <div class="product-intro">
+      <div class="section-heading">
+        <div class="eyebrow">Profesjonalne rozwiązania</div>
+        <h2>PRODUKTY WAXOYL</h2>
+        <p class="lead">
+          Sprawdzone produkty do ochrony antykorozyjnej i pielęgnacji samochodów.
+        </p>
+      </div>
+
+      <a class="btn" href="./#contact">ZAPYTAJ O PRODUKT →</a>
+    </div>
+
+    <div class="products">
+
+      <a class="product" href="./products/100-plus/index.html" aria-label="100 PLUS">
+        <img class="product-image" src="100-plus.png" alt="Waxoyl 100 Plus">
+        <strong>100 PLUS</strong>
+        <small>Zaawansowana ochrona lakieru, połysk i hydrofobowość.</small>
+      </a>
+
+      <a class="product" href="./products/120-4-plus/index.html" aria-label="120-4 PLUS">
+        <img class="product-image" src="120-4-plus.png" alt="Waxoyl 120-4 Plus">
+        <strong>120-4 PLUS</strong>
+        <small>Profesjonalna ochrona antykorozyjna.</small>
+      </a>
+
+      <a class="product" href="./products/hardwax-plus/index.html" aria-label="HARDWAX PLUS">
+        <div class="product-image"><div class="placeholder"></div></div>
+        <strong>HARDWAX PLUS</strong>
+        <small>Ochrona powierzchni na bazie wosku.</small>
+      </a>
+
+      <a class="product" href="./products/gravelgard/index.html" aria-label="GRAVELGARD">
+        <div class="product-image"><div class="placeholder"></div></div>
+        <strong>GRAVELGARD</strong>
+        <small>Ochrona przed czynnikami mechanicznymi i kamieniami.</small>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="corrosion" class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">System ochrony Waxoyl</div>
+      <h2>KOMPLEKSOWA OCHRONA<br>SAMOCHODU.</h2>
+      <p class="lead">
+        Rozwiązania Waxoyl pozwalają zabezpieczyć najważniejsze obszary samochodu —
+        od podwozia i profili zamkniętych po elementy zewnętrzne.
+      </p>
+    </div>
+
+    <div class="areas">
+      <article class="area">
+        <div class="area-number">01</div>
+        <h3>PODWOZIE</h3>
+        <p>Ochrona elementów najbardziej narażonych na wodę, sól i zabrudzenia.</p>
+      </article>
+
+      <article class="area">
+        <div class="area-number">02</div>
+        <h3>PROFILE ZAMKNIĘTE</h3>
+        <p>Zabezpieczenie trudno dostępnych przestrzeni wewnątrz konstrukcji.</p>
+      </article>
+
+      <article class="area">
+        <div class="area-number">03</div>
+        <h3>OCHRONA ZEWNĘTRZNA</h3>
+        <p>Warstwy ochronne przeznaczone do elementów zewnętrznych pojazdu.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section id="plus" class="section plus">
+  <div class="container">
+    <div class="split">
+
+      <div class="plus-image">
+        <img src="100-plus.png" alt="Waxoyl 100 Plus">
+      </div>
+
+      <div class="plus-content">
+        <div class="eyebrow">Car Care · 100 Plus</div>
+        <h2>100 PLUS</h2>
+
+        <p class="lead">
+          Powłoka oparta na dwóch rodzajach polimerów, która tworzy trwałą
+          warstwę ochronną i zapewnia wysoki połysk oraz właściwości hydrofobowe.
+        </p>
+
+        <div class="plus-list">
+          <div><b>01</b> Ochrona przed promieniowaniem UV</div>
+          <div><b>02</b> Wysoki połysk i głęboki kolor</div>
+          <div><b>03</b> Właściwości hydrofobowe</div>
+          <div><b>04</b> Wypełnianie drobnych rys i zmatowień</div>
+          <div><b>05</b> Łatwiejsze mycie samochodu</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn red" href="./#contact">POZNAJ PRODUKT →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cooperation" class="section">
+  <div class="container">
+
+    <div class="partner">
+      <div class="eyebrow">Waxoyl Polska · B2B</div>
+      <h2>NIGDY NIE PRACUJESZ SAM.</h2>
+
+      <p class="lead">
+        Produkty, technologia, szkolenia i wsparcie — buduj profesjonalną
+        ofertę razem z Waxoyl i zostań autoryzowanym partnerem.
+      </p>
+
+      <div class="actions">
+        <a class="btn red" href="./#contact">POROZMAWIAJMY →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="points" class="section dark">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Sieć Waxoyl Polska</div>
+      <h2>ZNAJDŹ<br>AUTORYZOWANY PUNKT.</h2>
+      <p class="lead">
+        Profesjonalne punkty Waxoyl oferują usługi ochrony i pielęgnacji
+        samochodów z wykorzystaniem rozwiązań marki.
+      </p>
+    </div>
+
+    <div class="actions">
+      <a class="btn red" href="./#contact">ZAPYTAJ O NAJBLIŻSZY PUNKT →</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+
+    <div class="split">
+
+      <div>
+        <div class="eyebrow">Kontakt</div>
+        <div class="section-heading">
+          <h2>POROZMAWIAJMY.</h2>
+        </div>
+        <p class="lead">
+          Pytania dotyczące produktów, współpracy lub autoryzowanych punktów?
+          Skontaktuj się z nami.
+        </p>
+      </div>
+
+      <div>
+        <p style="font-size:13px;line-height:1.9;color:#aaa">
+          <strong style="color:#fff">Vehicle Care System Sp. z o.o.</strong><br>
+          tel. +48 58 550 05 50<br>
+          biuro@waxoyl.pl<br>
+          www.waxoyl.pl
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <img class="footer-logo" src="./waxoyl-logo.gif" alt="Waxoyl">
+        <p>Professional Car Care.<br>Advanced Technology.</p>
+      </div>
+
+      <div>
+        <h4>NAWIGACJA</h4>
+        <p>
+          <a href="./#about">O firmie</a><br>
+          <a href="./products/index.html">Produkty</a><br><br>
+        </p>
+      </div>
+
+      <div>
+        <h4>WSPÓŁPRACA</h4>
+        <p>
+          <a href="./#cooperation">Partnerzy</a><br>
+          <a href="./autoryzowane-punkty/index.html">Autoryzowane punkty</a>
+        </p>
+      </div>
+
+      <div>
+        <h4>KONTAKT</h4>
+        <p>
+          +48 58 550 05 50<br>
+          biuro@waxoyl.pl
+        </p>
+      </div>
+
+    </div>
+
+    <div class="copy">
+      <span>© 2026 Waxoyl Polska</span>
+      <span>Polityka prywatności · Polityka cookies</span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav');
+
+menu.addEventListener('click',()=>{
+  nav.classList.toggle('open');
+});
+
+document.querySelectorAll('nav a').forEach(link=>{
+  link.addEventListener('click',()=>nav.classList.remove('open'));
+});
+
+const sections = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('nav a');
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(link=>{
+        link.classList.toggle(
+          'active',
+          link.getAttribute('href') === '#' + entry.target.id
+        );
+      });
+    }
+  });
+},{rootMargin:'-35% 0px -55% 0px'});
+
+sections.forEach(section=>observer.observe(section));
+</script>
+
+</body>
+</html>
