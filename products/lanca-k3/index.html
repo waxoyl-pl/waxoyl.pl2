@@ -24,7 +24,21 @@ footer{padding:26px 0;background:#050505;color:#555;font-size:8px;font-weight:70
 @media(max-width:950px){header{padding:0 22px;gap:18px}.brand{flex-basis:75px;width:75px}.brand img{width:62px}.hero{gap:32px;min-height:520px}.visual{min-height:390px}.benefits{grid-template-columns:repeat(2,1fr)}.section-head{grid-template-columns:1fr;gap:18px}.application-grid,.spec-layout{gap:35px}}
 @media(max-width:680px){.container{width:calc(100% - 36px)}header{height:70px;padding:0 16px;gap:12px}.brand{flex:0 0 58px;width:58px}.brand img{width:54px;height:54px}.header-back{font-size:8px;letter-spacing:.7px;white-space:normal;line-height:1.3}.head-cta{padding:10px 11px;font-size:7px;letter-spacing:.6px}.breadcrumb{padding-top:18px}.hero{grid-template-columns:1fr;gap:28px;padding:34px 0 55px;min-height:0}.hero h1{font-size:clamp(62px,17vw,94px);letter-spacing:-1.5px}.hero-lead{font-size:16px}.hero-copy{font-size:13px}.visual{min-height:315px}.visual img{height:270px;width:78%}.visual-fallback{min-height:200px}.section{padding:62px 0}.section-head{margin-bottom:27px}.section-title{font-size:54px}.benefits{grid-template-columns:1fr 1fr}.benefit{padding:21px 17px;min-height:190px}.benefit h3{font-size:20px}.benefit p{font-size:10px}.application-grid,.spec-layout{grid-template-columns:1fr;gap:28px}.spec-row{grid-template-columns:1fr;gap:6px}.cta-inner,.related-row{align-items:flex-start;flex-direction:column}.cta-action{width:100%}.cta-action .button-red{width:100%}.footer-row{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
 @media(max-width:390px){.head-cta{max-width:110px;text-align:center}.benefits{grid-template-columns:1fr}.benefit{min-height:auto}}
+
+/* TECHNICAL DOCUMENTATION REQUEST */
+.docs-request{padding:42px 0 48px;background:linear-gradient(110deg,#101010,#080808);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.docs-request .container{width:min(1280px,calc(100% - 64px));margin:auto}
+.docs-request-inner{display:flex;justify-content:space-between;align-items:center;gap:32px;border-left:2px solid #e30613;padding:4px 0 4px 24px}
+.docs-kicker{color:#e30613;font-size:8px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+.docs-request h2{font-family:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;font-size:30px;line-height:.95;letter-spacing:.3px;color:#f3f3f1;margin:9px 0 8px;text-transform:uppercase}
+.docs-request p{color:#858580;font-size:10px;line-height:1.75;max-width:690px;margin:0}
+.docs-button{flex:0 0 auto;display:inline-flex;align-items:center;gap:18px;padding:15px 18px;border:1px solid rgba(227,6,19,.65);color:#eee;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase;transition:.2s}
+.docs-button b{color:#e30613;font-size:15px;font-weight:400}
+.docs-button:hover{background:#e30613;border-color:#e30613;color:#fff}.docs-button:hover b{color:#fff}
+@media(max-width:680px){.docs-request{padding:32px 0}.docs-request .container{width:calc(100% - 36px)}.docs-request-inner{align-items:flex-start;flex-direction:column;gap:18px;padding-left:17px}.docs-request h2{font-size:26px}.docs-button{width:100%;justify-content:space-between}}
+
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "LANCA K3", "brand": {"@type": "Brand", "name": "Waxoyl"}, "description": "Element profesjonalnego systemu aplikacyjnego Waxoyl.", "category": "Processing equipment", "url": "https://waxoyl-pl.github.io/waxoyl.pl2/products/lanca-k3/"}</script>
 </head>
 <body>
 <header>
@@ -56,7 +70,21 @@ footer{padding:26px 0;background:#050505;color:#555;font-size:8px;font-weight:70
 <div class="spec-row"><strong>MODEL</strong><span>K3</span></div>
 <div class="spec-row"><strong>KOMPATYBILNOŚĆ</strong><span>Zależna od produktu i urządzenia</span></div>
 <div class="spec-row"><strong>KATEGORIA</strong><span>Sprzęt aplikacyjny</span></div></div></div></div></section>
-  <section class="cta-section"><div class="container"><div class="cta-inner"><div><h2>CHCESZ DOBRAĆ<br>ODPOWIEDNI PRODUKT?</h2><p>Skontaktuj się z Waxoyl Polska. Pomożemy dobrać rozwiązanie do rodzaju powierzchni, zastosowania i technologii pracy.</p></div><div class="cta-action"><a class="button-red" href="../../index.html#contact">SKONTAKTUJ SIĘ Z NAMI →</a></div></div></div></section>
+  
+  <section class="docs-request">
+    <div class="container">
+      <div class="docs-request-inner">
+        <div>
+          <div class="docs-kicker">WSPARCIE TECHNICZNE · WAXOYL POLSKA</div>
+          <h2>INSTRUKCJA I INFORMACJE TECHNICZNE</h2>
+          <p>Potrzebujesz instrukcji obsługi, informacji o kompatybilności lub parametrów sprzętu? Napisz do zespołu Waxoyl Polska i podaj model urządzenia.</p>
+        </div>
+        <a class="docs-button" href="mailto:biuro@waxoyl.pl?subject=Informacje%20techniczne%20-%20LANCA%20K3">ZAPYTAJ O INFORMACJE TECHNICZNE <b>↗</b></a>
+      </div>
+    </div>
+  </section>
+
+<section class="cta-section"><div class="container"><div class="cta-inner"><div><h2>CHCESZ DOBRAĆ<br>ODPOWIEDNI PRODUKT?</h2><p>Skontaktuj się z Waxoyl Polska. Pomożemy dobrać rozwiązanie do rodzaju powierzchni, zastosowania i technologii pracy.</p></div><div class="cta-action"><a class="button-red" href="../../index.html#contact">SKONTAKTUJ SIĘ Z NAMI →</a></div></div></div></section>
   <section class="related"><div class="container"><div class="related-row"><div><h2>WAXOYL POLSKA</h2><p>Profesjonalne rozwiązania z zakresu car care i ochrony antykorozyjnej.</p></div><div class="related-links"><a href="../index.html">← Wszystkie produkty</a><a href="../../wspolpraca/index.html">Współpraca</a><a href="../../autoryzowane-punkty/index.html">Autoryzowane punkty</a></div></div></div></section>
 </main>
 <footer><div class="container"><div class="footer-row"><div class="footer-brand">WAXOYL POLSKA · PROFESSIONAL CAR CARE</div><div class="footer-links"><a href="../../index.html">Strona główna</a><a href="../index.html">Produkty</a><a href="../../index.html#contact">Kontakt</a></div><div>FOR PROFESSIONAL USE ONLY</div></div></div></footer>
