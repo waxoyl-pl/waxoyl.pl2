@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waxoyl Engine Cleaner — koncentrat do mycia silników</title>
+<meta name="description" content="Wysoce zasadowy, wszechstronny koncentrat do czyszczenia silników i różnych powierzchni.">
+<meta name="theme-color" content="#050505">
+<style>@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--red:#e30613;--bg:#050505;--panel:#0d0d0d;--panel2:#111;--white:#f5f5f3;--muted:#a0a09b;--soft:#777;--line:rgba(255,255,255,.10);--display:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;--body:'Inter',Arial,sans-serif;--max:1280px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.65}body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 64px));margin:auto}
+header{height:82px;position:sticky;top:0;z-index:100;background:rgba(4,4,4,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 34px;gap:28px}.brand{width:100px;flex:0 0 100px;display:flex;align-items:center}.brand img{width:70px;height:64px;object-fit:contain}.header-back{font-size:9px;font-weight:800;letter-spacing:1.3px;color:#bbb;text-transform:uppercase;white-space:nowrap}.header-back:hover{color:white}.head-cta{margin-left:auto;border:1px solid rgba(227,6,19,.8);padding:12px 16px;font-size:9px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;white-space:nowrap;transition:.25s}.head-cta:hover{background:var(--red)}
+.breadcrumb{padding:22px 0 0;color:#555;font-size:9px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase}.breadcrumb a{color:#999}.breadcrumb span{color:var(--red);margin:0 8px}
+.hero{padding:36px 0 82px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;min-height:610px;border-bottom:1px solid var(--line)}.eyebrow{display:flex;align-items:center;gap:12px;color:var(--red);font-size:9px;font-weight:800;letter-spacing:2.3px;text-transform:uppercase}.eyebrow:before{content:'';height:1px;width:32px;background:var(--red)}h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase}h1{font-size:clamp(70px,8vw,120px);line-height:.82;letter-spacing:-2.6px;margin:24px 0}.hero h1 .red{color:var(--red)}.hero-copy{font-size:15px;color:#aaa;line-height:1.85;max-width:670px}.hero-lead{font-size:18px;color:#ddd;line-height:1.55;max-width:650px;margin:0 0 17px}.hero-actions{display:flex;align-items:center;gap:14px;margin-top:32px;flex-wrap:wrap}.button-red{display:inline-flex;align-items:center;justify-content:center;padding:16px 21px;background:var(--red);font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;transition:.25s}.button-red:hover{background:#ff1b28}.button-ghost{display:inline-flex;align-items:center;gap:8px;padding:15px 2px;color:#aaa;font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.button-ghost b{color:var(--red)}
+.visual{min-height:465px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 45%,rgba(227,6,19,.15),transparent 36%),linear-gradient(140deg,#111,#070707 70%)}.visual:before,.visual:after{content:'';position:absolute;border:1px solid rgba(255,255,255,.07);border-radius:50%;width:380px;height:380px}.visual:after{width:290px;height:290px;border-color:rgba(227,6,19,.15)}.visual img{position:relative;z-index:2;width:min(76%,410px);height:380px;object-fit:contain;filter:drop-shadow(0 32px 45px rgba(0,0,0,.7))}.visual-fallback{display:none;position:relative;z-index:2;min-height:260px;width:54%;padding:28px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,#222,#0d0d0d);align-items:center;justify-content:center;text-align:center;box-shadow:0 30px 60px #000}.visual-fallback strong{font-family:var(--display);font-size:clamp(26px,4vw,48px);line-height:.9;color:#ddd;text-transform:uppercase}.visual-fallback small{display:block;font-family:var(--body);font-size:8px;letter-spacing:2px;color:var(--red);margin-top:16px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.tag{border:1px solid var(--line);padding:8px 11px;color:#888;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.tag.red{border-color:rgba(227,6,19,.35);color:#e7a0a3}
+.section{padding:88px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:end;margin-bottom:38px}.section-kicker{color:var(--red);font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-title{font-size:clamp(44px,5vw,72px);line-height:.88;margin:13px 0 0;letter-spacing:-.5px}.section-intro{font-size:14px;line-height:1.85;color:#999;max-width:720px;margin:0}.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.benefit{background:linear-gradient(145deg,#111,#090909);padding:27px 23px;min-height:205px}.benefit .num{font-family:var(--display);font-size:34px;color:#333;line-height:1}.benefit h3{font-size:23px;line-height:.95;margin:17px 0 9px}.benefit p{font-size:11px;color:#858580;line-height:1.75;margin:0}
+.application-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}.use-list{display:grid;gap:0;border-top:1px solid var(--line)}.use-item{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line);color:#c7c7c2;font-size:12px}.use-item b{color:var(--red);font-size:10px;letter-spacing:1px;flex:0 0 24px}.application-note{background:linear-gradient(145deg,#111,#090909);border:1px solid var(--line);border-left:2px solid var(--red);padding:27px 29px;color:#aaa;font-size:12px;line-height:1.9}.application-note strong{display:block;font-family:var(--display);font-size:25px;line-height:1;margin-bottom:12px;color:#eee}
+.spec-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.spec-table{border-top:1px solid var(--line)}.spec-row{display:grid;grid-template-columns:minmax(180px,.7fr) 1.3fr;gap:24px;padding:17px 0;border-bottom:1px solid var(--line)}.spec-row strong{font-size:8px;letter-spacing:1.3px;color:#666;text-transform:uppercase}.spec-row span{font-size:12px;color:#c4c4bf}.source-note{margin-top:20px;color:#656560;font-size:10px;line-height:1.7}
+.related{padding:60px 0}.related-row{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding-top:25px}.related-row h2{font-size:34px;line-height:1;margin:0}.related-row p{color:#777;font-size:10px;margin:8px 0 0}.related-links{display:flex;gap:12px;flex-wrap:wrap}.related-links a{border:1px solid var(--line);padding:12px 15px;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#aaa}.related-links a:hover{border-color:var(--red);color:white}
+.cta-section{padding:62px 0 78px;background:radial-gradient(circle at 85% 55%,rgba(227,6,19,.12),transparent 24%),#090909;border-top:1px solid var(--line)}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:40px}.cta-inner h2{font-size:clamp(42px,5vw,70px);line-height:.86;margin:0}.cta-inner p{color:#888;font-size:12px;max-width:500px;margin:13px 0 0}.cta-action{flex:0 0 auto}
+footer{padding:26px 0;background:#050505;color:#555;font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px}.footer-brand{color:#aaa}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:#fff}
+@media(max-width:950px){header{padding:0 22px;gap:18px}.brand{flex-basis:75px;width:75px}.brand img{width:62px}.hero{gap:32px;min-height:520px}.visual{min-height:390px}.benefits{grid-template-columns:repeat(2,1fr)}.section-head{grid-template-columns:1fr;gap:18px}.application-grid,.spec-layout{gap:35px}}
+@media(max-width:680px){.container{width:calc(100% - 36px)}header{height:70px;padding:0 16px;gap:12px}.brand{flex:0 0 58px;width:58px}.brand img{width:54px;height:54px}.header-back{font-size:8px;letter-spacing:.7px;white-space:normal;line-height:1.3}.head-cta{padding:10px 11px;font-size:7px;letter-spacing:.6px}.breadcrumb{padding-top:18px}.hero{grid-template-columns:1fr;gap:28px;padding:34px 0 55px;min-height:0}.hero h1{font-size:clamp(62px,17vw,94px);letter-spacing:-1.5px}.hero-lead{font-size:16px}.hero-copy{font-size:13px}.visual{min-height:315px}.visual img{height:270px;width:78%}.visual-fallback{min-height:200px}.section{padding:62px 0}.section-head{margin-bottom:27px}.section-title{font-size:54px}.benefits{grid-template-columns:1fr 1fr}.benefit{padding:21px 17px;min-height:190px}.benefit h3{font-size:20px}.benefit p{font-size:10px}.application-grid,.spec-layout{grid-template-columns:1fr;gap:28px}.spec-row{grid-template-columns:1fr;gap:6px}.cta-inner,.related-row{align-items:flex-start;flex-direction:column}.cta-action{width:100%}.cta-action .button-red{width:100%}.footer-row{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
+@media(max-width:390px){.head-cta{max-width:110px;text-align:center}.benefits{grid-template-columns:1fr}.benefit{min-height:auto}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="../../index.html" aria-label="Waxoyl Polska — strona główna"><img src="../../waxoyl-logo.gif" alt="Waxoyl Professional Car Care"></a>
+  <a class="header-back" href="../index.html">← Powrót do produktów</a>
+  <a class="head-cta" href="../../index.html#contact">Zapytaj o produkt <b style="color:#fff">↗</b></a>
+</header>
+<main>
+  <div class="container">
+    <div class="breadcrumb"><a href="../../index.html">Strona główna</a><span>/</span><a href="../index.html">Produkty</a><span>/</span>ENGINE CLEANER</div>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">CZYSZCZENIE · KOMORA SILNIKA</div>
+        <h1>ENGINE CLEANER</h1>
+        <p class="hero-lead">Wysoce zasadowy, wszechstronny koncentrat do czyszczenia silników i różnych powierzchni.</p>
+        <p class="hero-copy">Waxoyl Engine Cleaner to wysoce zasadowy koncentrat w płynie przeznaczony przede wszystkim do mycia silników. Według opisu produktu sprawdza się również przy czyszczeniu metali, szkła i winylu oraz wybranych powierzchni w pojazdach i jednostkach pływających.</p>
+        <div class="hero-tags"><span class="tag">WAXOYL POLSKA</span><span class="tag red">PROFESSIONAL USE</span><span class="tag">08 / 15</span></div>
+        <div class="hero-actions"><a class="button-red" href="../../index.html#contact">ZAPYTAJ O PRODUKT →</a><a class="button-ghost" href="../index.html">ZOBACZ KATALOG <b>↗</b></a></div>
+      </div>
+      <div class="visual"><div class="visual-fallback" style="display:flex"><div><strong>ENGINE CLEANER · WAXOYL</strong><small>PROFESSIONAL CAR CARE</small></div></div></div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="section-kicker">08 · INFORMACJE O PRODUKCIE</div><h2 class="section-title">POZNAJ<br>MOŻLIWOŚCI.</h2></div>
+        <p class="section-intro">Waxoyl Engine Cleaner to wysoce zasadowy koncentrat w płynie przeznaczony przede wszystkim do mycia silników. Według opisu produktu sprawdza się również przy czyszczeniu metali, szkła i winylu oraz wybranych powierzchni w pojazdach i jednostkach pływających.</p>
+      </div>
+      <div class="benefits"><article class="benefit"><div class="num">01</div><h3>Czyszczenie silników</h3><p>Koncentrat przeznaczony do usuwania zabrudzeń z komory silnika i jego elementów.</p></article>
+<article class="benefit"><div class="num">02</div><h3>Wiele rodzajów powierzchni</h3><p>Może być stosowany do mycia metali, szkła i winylu.</p></article>
+<article class="benefit"><div class="num">03</div><h3>Zastosowania poza motoryzacją</h3><p>Opis produktu wymienia także łodzie, plandeki i podwozia pojazdów.</p></article>
+<article class="benefit"><div class="num">04</div><h3>Usuwanie trudnych pozostałości</h3><p>Pomaga usuwać pozostałości preparatów nabłyszczających, smołę, kleje i farby.</p></article></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="application-grid">
+        <div>
+          <div class="section-kicker">ZASTOSOWANIE</div>
+          <h2 class="section-title">Do silników i wybranych powierzchni technicznych.</h2>
+          <div class="use-list"><div class="use-item"><b>01</b><span>Silniki i komory silnika.</span></div>
+<div class="use-item"><b>02</b><span>Powierzchnie metalowe, szklane i winylowe.</span></div>
+<div class="use-item"><b>03</b><span>Łodzie, plandeki i podwozia pojazdów.</span></div></div>
+        </div>
+        <div>
+          <div class="section-kicker">SPOSÓB UŻYCIA</div>
+          <div class="application-note"><strong>PROFESJONALNA APLIKACJA</strong>Opis produktu wskazuje aplikację za pomocą pianownicy. Sposób przygotowania, stężenie robocze i czas działania należy dobrać zgodnie z aktualną instrukcją producenta oraz rodzajem czyszczonej powierzchni.</div>
+          <p class="source-note">Opis produktu nie określa w tym materiale uniwersalnego rozcieńczenia. Nie należy przyjmować proporcji z innych preparatów Waxoyl.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="spec-layout">
+        <div><div class="section-kicker">DANE PRODUKTU</div><h2 class="section-title">NAJWAŻNIEJSZE<br>INFORMACJE.</h2><p class="source-note">Wartości i opisy podano na podstawie dostępnych materiałów produktowych. Przed zastosowaniem należy sprawdzić aktualną etykietę, kartę techniczną i kartę charakterystyki.</p></div>
+        <div class="spec-table"><div class="spec-row"><strong>RODZAJ</strong><span>Wysoce zasadowy koncentrat w płynie</span></div>
+<div class="spec-row"><strong>APLIKACJA</strong><span>Pianownica</span></div>
+<div class="spec-row"><strong>OPAKOWANIA</strong><span>1 l i 25 l</span></div>
+<div class="spec-row"><strong>ZASTOSOWANIE</strong><span>Silniki oraz wybrane powierzchnie techniczne</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container"><div class="cta-inner"><div><h2>CHCESZ DOBRAĆ<br>ODPOWIEDNI PRODUKT?</h2><p>Skontaktuj się z Waxoyl Polska. Pomożemy dobrać rozwiązanie do rodzaju powierzchni, zastosowania i technologii pracy.</p></div><div class="cta-action"><a class="button-red" href="../../index.html#contact">SKONTAKTUJ SIĘ Z NAMI →</a></div></div></div>
+  </section>
+
+  <section class="related"><div class="container"><div class="related-row"><div><h2>WAXOYL POLSKA</h2><p>Profesjonalne rozwiązania z zakresu car care i ochrony antykorozyjnej.</p></div><div class="related-links"><a href="../index.html">← Wszystkie produkty</a><a href="../../wspolpraca/index.html">Współpraca</a><a href="../../autoryzowane-punkty/index.html">Autoryzowane punkty</a></div></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-row"><div class="footer-brand">WAXOYL POLSKA · PROFESSIONAL CAR CARE</div><div class="footer-links"><a href="../../index.html">Strona główna</a><a href="../index.html">Produkty</a><a href="../../index.html#contact">Kontakt</a></div><div>FOR PROFESSIONAL USE ONLY</div></div></div></footer>
+</body>
+</html>
